@@ -15,20 +15,22 @@ public class BearBootApplication {
 		SpringApplication.run(BearBootApplication.class, args);
 	}
 
-	// @Bean
-	// public CommandLineRunner testUUID() {
-	// return (args) -> {
-	// RestTemplate restTemplate = new RestTemplate();
-	// GUID guid = restTemplate.getForObject("http://httpbin.org/uuid",
-	// GUID.class);
-	// log.info(guid.toString());
-	// };
-	// }
 
 	@Bean
-	public CommandLineRunner startInfo() {
+	public CommandLineRunner bear() {
 		return (args) -> {
-			log.info("started up...");
+			log.info("         _  /  _       /\n" + 
+					"        (o\\/--/o)     /\n" + 
+					"        ,(/. . )    ,/\n" + 
+					"      ,'_/ (Y) )  ,'/\n" + 
+					" ___,'_(/ \\__ ( ,' /\n" + 
+					" \\ ,' //\\    `-.-./\n" + 
+					"  \\  (/  `---.__)/)\n" + 
+					"   \\ /\\    \\  \\ /\\\n" + 
+					"    \\__)    )  )__\\\n" + 
+					"      (    (  (\n" + 
+					"       \\    )  )\n" + 
+					"        `--^`--^");
 		};
 	}
 }

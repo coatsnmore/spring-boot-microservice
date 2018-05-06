@@ -30,7 +30,7 @@ public class GUIDController {
 	}
 
 	@RequestMapping("/uuids/{id}")
-	public GUID guidById(@PathVariable("id") Long id) {
+	public GUID guidById(@PathVariable("id") String id) {
 		System.out.println("get guid by id... " + id);
 		Optional<GUID> guid = guidRepository.findById(id);
 		System.out.println("...guid: " + guid.get());
